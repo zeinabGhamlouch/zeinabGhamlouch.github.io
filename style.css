@@ -547,24 +547,22 @@ a:hover {
   z-index: 1000;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav-center {
-  display: inline-flex;      
-  justify-content: center;   
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-
+  width: fit-content;
   gap: 36px;
   padding: 14px 32px;
   border-radius: 999px;
-
   backdrop-filter: blur(18px);
   background: rgba(20, 10, 35, 0.6);
-
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
-
-  margin: 0 auto;            
+  margin: 0 auto;
 }
 
 .nav-center a {
@@ -572,12 +570,10 @@ a:hover {
   font-size: 1.05rem;
   letter-spacing: 0.04em;
   color: #d8c8ff;
-
   position: relative;
   transition: all 0.25s ease;
 }
 
-/* glow underline */
 .nav-center a::after {
   content: "";
   position: absolute;
