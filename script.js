@@ -1,9 +1,12 @@
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
 }
 
 window.addEventListener("load", () => {
-  window.scrollTo(0, 0);
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+  }
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
 });
 
 const reveals = document.querySelectorAll(".reveal");
