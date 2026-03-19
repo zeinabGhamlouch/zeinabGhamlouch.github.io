@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #faf7fc;
+  color: #1f1b24;
+}
+
+h1, h2 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #6f3cc3;
+}
+
+.hero {
+  padding: 100px 10%;
+}
+
+.hero h1 span {
+  color: #6f3cc3;
+}
+
+.section {
+  padding: 60px 10%;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: gray;
+}
