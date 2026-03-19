@@ -3,10 +3,8 @@ if ("scrollRestoration" in history) {
 }
 
 window.addEventListener("load", () => {
-  if (window.location.hash) {
-    history.replaceState(null, null, window.location.pathname);
-  }
-  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  history.replaceState(null, null, window.location.pathname);
+  window.scrollTo(0, 0);
 });
 
 const reveals = document.querySelectorAll(".reveal");
@@ -23,19 +21,6 @@ const observer = new IntersectionObserver(
 );
 
 reveals.forEach((el) => observer.observe(el));
-
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-if (menuBtn && navLinks) {
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-
-  navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => navLinks.classList.remove("show"));
-  });
-}
 
 const mouseGlow = document.querySelector(".mouse-glow");
 window.addEventListener("mousemove", (e) => {
@@ -63,3 +48,83 @@ tiltCards.forEach((card) => {
     card.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)";
   });
 });
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const targetId = link.getAttribute("href");
+    const target = document.querySelector(targetId);
+
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, null, window.location.pathname);
+    }
+  });
+});
+
+// if ("scrollRestoration" in history) {
+//   history.scrollRestoration = "manual";
+// }
+
+// window.addEventListener("load", () => {
+//   if (window.location.hash) {
+//     history.replaceState(null, null, window.location.pathname);
+//   }
+//   window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+// });
+
+// const reveals = document.querySelectorAll(".reveal");
+
+// const observer = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add("visible");
+//       }
+//     });
+//   },
+//   { threshold: 0.14 }
+// );
+
+// reveals.forEach((el) => observer.observe(el));
+
+// const menuBtn = document.getElementById("menuBtn");
+// const navLinks = document.getElementById("navLinks");
+
+// if (menuBtn && navLinks) {
+//   menuBtn.addEventListener("click", () => {
+//     navLinks.classList.toggle("show");
+//   });
+
+//   navLinks.querySelectorAll("a").forEach((link) => {
+//     link.addEventListener("click", () => navLinks.classList.remove("show"));
+//   });
+// }
+
+// const mouseGlow = document.querySelector(".mouse-glow");
+// window.addEventListener("mousemove", (e) => {
+//   if (mouseGlow) {
+//     mouseGlow.style.left = `${e.clientX}px`;
+//     mouseGlow.style.top = `${e.clientY}px`;
+//   }
+// });
+
+// const tiltCards = document.querySelectorAll(".tilt");
+
+// tiltCards.forEach((card) => {
+//   card.addEventListener("mousemove", (e) => {
+//     const rect = card.getBoundingClientRect();
+//     const x = e.clientX - rect.left;
+//     const y = e.clientY - rect.top;
+
+//     const rotateX = ((y / rect.height) - 0.5) * -8;
+//     const rotateY = ((x / rect.width) - 0.5) * 8;
+
+//     card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+//   });
+
+//   card.addEventListener("mouseleave", () => {
+//     card.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)";
+//   });
+// });
