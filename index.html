@@ -2,65 +2,228 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zeinab Ghamlouch | Researcher</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div class="bg-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
 
-<header class="navbar">
-  <div class="logo">Zeinab Ghamlouch</div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header class="navbar">
+    <a href="#" class="logo">ZG</a>
 
-<section class="hero">
-  <h1>Hi, I’m <span>Zeinab</span></h1>
-  <p>
-    Researcher in LLMs, Taxonomies, and Graph Neural Networks.
-    I design intelligent systems for structured knowledge and semantic reasoning.
-  </p>
-</section>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-<section id="about" class="section">
-  <h2>About</h2>
-  <p>
-    I work on combining large language models with graph-based learning to build scalable
-    and interpretable knowledge systems.
-  </p>
-</section>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </header>
 
-<section id="research" class="section">
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Large Language Models</li>
-    <li>Taxonomy Expansion</li>
-    <li>Graph Neural Networks</li>
-    <li>Knowledge Graphs</li>
-  </ul>
-</section>
+  <main>
+    <section class="hero">
+      <div class="hero-text reveal">
+        <p class="eyebrow">LLMs • Taxonomies • GNNs • Knowledge Systems</p>
+        <h1>
+          Zeinab Ghamlouch
+          <span>Building elegant AI systems for structured knowledge.</span>
+        </h1>
 
-<section id="projects" class="section">
-  <h2>Projects</h2>
-  <p><strong>Taxoria</strong> — LLM-driven taxonomy expansion pipeline</p>
-</section>
+        <p class="hero-description">
+          I’m interested in large language models, taxonomy expansion, graph neural networks,
+          and neuro-symbolic approaches for semantic reasoning and interpretable knowledge systems.
+        </p>
 
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Email: your.email@example.com</p>
-</section>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#publications">View Publications</a>
+          <a class="btn btn-secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
 
-<footer>
-  <p>© 2026 Zeinab Ghamlouch</p>
-</footer>
+      <div class="hero-panel reveal">
+        <div class="glass-card intro-card">
+          <div class="profile-circle">ZG</div>
+          <h3>Researcher</h3>
+          <p class="muted">
+            Exploring the intersection of language, structure, and intelligent systems.
+          </p>
 
+          <div class="mini-tags">
+            <span>LLMs</span>
+            <span>Taxonomies</span>
+            <span>GNNs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="section-heading">
+        <p class="section-label">About</p>
+        <h2>A little about me</h2>
+      </div>
+
+      <div class="glass-card">
+        <p>
+          I work on combining large language models with structured and graph-based methods
+          to build scalable, meaningful, and interpretable knowledge systems. My interests include
+          taxonomy construction and expansion, representation learning, and semantic organization
+          of information.
+        </p>
+      </div>
+    </section>
+
+    <section id="education" class="section reveal">
+      <div class="section-heading">
+        <p class="section-label">Education</p>
+        <h2>My academic path</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item glass-card">
+          <div class="timeline-date">2024 — Present</div>
+          <div>
+            <h3>Master’s Degree</h3>
+            <p class="muted">Add your university here</p>
+            <p>
+              Focus on machine learning, AI, knowledge representation, and semantic systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item glass-card">
+          <div class="timeline-date">2021 — 2024</div>
+          <div>
+            <h3>Bachelor’s Degree</h3>
+            <p class="muted">Add your university here</p>
+            <p>
+              Add your degree details, relevant coursework, or honors here.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section reveal">
+      <div class="section-heading">
+        <p class="section-label">Research</p>
+        <h2>What I’m interested in</h2>
+      </div>
+
+      <div class="chips">
+        <span>Large Language Models</span>
+        <span>Taxonomy Expansion</span>
+        <span>Graph Neural Networks</span>
+        <span>Knowledge Graphs</span>
+        <span>Representation Learning</span>
+        <span>Neuro-symbolic AI</span>
+        <span>Semantic Reasoning</span>
+        <span>Structured Knowledge</span>
+      </div>
+    </section>
+
+    <section id="publications" class="section reveal">
+      <div class="section-heading">
+        <p class="section-label">Publications</p>
+        <h2>Selected work</h2>
+      </div>
+
+      <div class="cards-grid">
+        <article class="glass-card publication-card">
+          <div class="card-top">
+            <span class="year-badge">2026</span>
+          </div>
+          <h3>Paper Title Here</h3>
+          <p class="muted">Authors • Conference / Journal</p>
+          <p>
+            Add a short description of the contribution, the problem, and what makes it interesting.
+          </p>
+          <div class="card-links">
+            <a href="#">PDF</a>
+            <a href="#">Code</a>
+            <a href="#">BibTeX</a>
+          </div>
+        </article>
+
+        <article class="glass-card publication-card">
+          <div class="card-top">
+            <span class="year-badge">2025</span>
+          </div>
+          <h3>Another Publication</h3>
+          <p class="muted">Authors • Venue</p>
+          <p>
+            Add another paper, preprint, report, or publication-related item here.
+          </p>
+          <div class="card-links">
+            <a href="#">PDF</a>
+            <a href="#">Project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="section-heading">
+        <p class="section-label">Projects</p>
+        <h2>Things I’m building</h2>
+      </div>
+
+      <div class="cards-grid">
+        <article class="glass-card project-card">
+          <h3>Taxoria</h3>
+          <p>
+            An LLM-assisted taxonomy expansion pipeline combining candidate generation,
+            semantic filtering, and structured validation.
+          </p>
+        </article>
+
+        <article class="glass-card project-card">
+          <h3>Hierarchy-Aware GNN Exploration</h3>
+          <p>
+            Studying graph-based methods for modeling parent-child semantic relations
+            in taxonomies and hierarchical knowledge structures.
+          </p>
+        </article>
+
+        <article class="glass-card project-card">
+          <h3>Research Portfolio</h3>
+          <p>
+            A curated space for publications, academic work, and AI research interests.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="section-heading">
+        <p class="section-label">Contact</p>
+        <h2>Let’s connect</h2>
+      </div>
+
+      <div class="glass-card contact-card">
+        <p><strong>Email:</strong> your.email@example.com</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/zeinabGhamlouch" target="_blank">github.com/zeinabGhamlouch</a></p>
+        <p><strong>LinkedIn:</strong> <a href="#" target="_blank">Add your LinkedIn</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Zeinab Ghamlouch — designed with purple intelligence.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
